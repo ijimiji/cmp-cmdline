@@ -4,7 +4,7 @@ local definitions = {
   {
     ctype = 'cmdline',
     regex = [=[[^[:blank:]]*$]=],
-    kind = cmp.lsp.CompletionItemKind.Variable,
+    kind = cmp.lsp.CompletionItemKind.File,
     isIncomplete = true,
     exec = function(arglead, cmdline, _)
       local s = vim.regex([[\k*$]]):match_str(arglead)
